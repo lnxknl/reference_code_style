@@ -82,7 +82,7 @@ void app_set_configuration(app_configuration *conf) {
 
 	imu_init(&conf->imu_conf);
 
-	if (app_changed) {
+	if (app_changed) {// @NOTE 
 		if (appconf.app_to_use != APP_PPM &&
 				appconf.app_to_use != APP_PPM_UART &&
 				appconf.servo_out_enable) {

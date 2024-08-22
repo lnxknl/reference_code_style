@@ -35,14 +35,14 @@ static void i2c_start_cond(i2c_bb_state *s);
 static void i2c_stop_cond(i2c_bb_state *s);
 static void i2c_write_bit(i2c_bb_state *s, bool bit);
 static bool i2c_read_bit(i2c_bb_state *s);
-static bool i2c_write_byte(i2c_bb_state *s, bool send_start, bool send_stop, unsigned char byte);
+static bool i2c_write_byte(i2c_bb_state *s, bool send_start, bool send_stop, unsigned char byte);// @NOTE 
 static unsigned char i2c_read_byte(i2c_bb_state *s, bool nack, bool send_stop);
 static bool clock_stretch_timeout(i2c_bb_state *s);
 static void i2c_delay(float seconds);
 
 static inline float rate2secs(i2c_bb_state *s) {
 	switch (s->rate) {
-	case I2C_BB_RATE_100K: return 3.5e-6;
+	case I2C_BB_RATE_100K: return 3.5e-6;// @NOTE 
 	case I2C_BB_RATE_200K: return 1.0e-6;
 	case I2C_BB_RATE_400K: return 2.5e-7;
 	case I2C_BB_RATE_700K: return 0.0;

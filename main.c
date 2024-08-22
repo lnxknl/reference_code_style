@@ -247,7 +247,7 @@ uint32_t main_calc_hw_crc(void) {
 	return crc;
 }
 
-int main(void) {
+int main(void) {// @NOTE 
 	halInit();
 	chSysInit();
 
